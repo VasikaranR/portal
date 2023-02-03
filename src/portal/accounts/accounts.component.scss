@@ -274,10 +274,10 @@
                 color: #f4b400;
             }
             .video-file {
-                color: $theme-color-video;
+                color: #935dc1;
             }
             .zip-file {
-                color: $theme-color-zip;
+                color:#252930;
             }
         }
 
@@ -286,7 +286,7 @@
     .app-doc-title {
 	    font-size: 0.875rem;
 	    a {
-		    color: $theme-text-color-primary;
+		    color: #252930;
 	    }
 	    &.truncate {
 			max-width: calc(100% - 30px);
@@ -319,8 +319,8 @@
 	.table {
 		font-size: 0.875rem;	
 		.cell {
-			border-color: $theme-border-color;
-			color: $theme-text-color-secondary;
+			border-color:lighten(#252930, 75%);
+			color: lighten(#252930, 25%);
 			vertical-align: middle;
 		}	
 	}
@@ -330,7 +330,7 @@
 		}
 		.note {
 			display: block;
-			color: $theme-text-color-light;
+			color: lighten(#252930, 40%);
 			font-size: 0.75rem;
 			
 		}
@@ -356,20 +356,20 @@
 	background: #fff;
 	padding: 0;
 	.nav-link {
-		color: $theme-text-color-secondary;
+		color: lighten(#252930, 75%);
 		font-size: 0.875rem;
 		font-weight: bold;
 		&.active {
-			color: $theme-color-primary;
-			border-bottom: 2px solid $theme-color-primary;
+			color: #15a362;
+			border-bottom: 2px solid #15a362;
 			&:hover {
 				background: none;
 				
 			}
 		}
 		&:hover {
-			background: lighten($theme-color-primary, 60%);
-			color: $theme-color-primary;
+			background: lighten(#15a362, 60%);
+			color: #15a362;
 		}
 	}
 	
@@ -379,21 +379,21 @@
 	.pagination {
 		font-size: 0.875rem;		
 		.page-link {
-			color: $theme-text-color-secondary;
+			color: lighten(#252930,25%);
 			padding: 0.25rem 0.5rem
 			
 		}
 		.page-item {
 			&.active {
 				.page-link {
-					background: lighten($theme-text-color-secondary, 10%);
+					background: lighten(lighten(#252930,25%), 10%);
 					color: #fff;
-					border-color: lighten($theme-text-color-secondary, 10%);
+					border-color: lighten(lighten(#252930,25%), 10%);
 				}
 			}
 			&.disabled {
 				.page-link {
-					color: lighten($theme-text-color-light, 10%);
+					color: lighten(lighten(#252930, 40%), 10%);
 				}
 			}
 
@@ -410,9 +410,9 @@
 
 	.faq-accordion {
 		.accordion-item {
-			@include border-radius(0);
+			border-radius:0;
 			border: none;	
-			border-bottom: 1px solid $theme-border-color;	
+			border-bottom: 1px solid #252930;	
 			&:last-child {
 				border-bottom: none;
 			}	
@@ -422,14 +422,14 @@
 		}
 		.accordion-button {
 			padding: 1rem;
-			@include border-radius(0);
+			border-radius :0;
 			border: none;
 			box-shadow: none;
 			background: none;
 			padding-left: 0;
 			font-size: 1rem;
 			text-decoration: none;
-			color: $theme-color-primary;
+			color: #15a362;
 			
 
 			&:after {
@@ -511,7 +511,7 @@
 }
 
 .app-table-hover > tbody > tr:hover {
-    background-color: mix($theme-bg-light, white, 50%);
+    background-color: mix(#f5f6fe, white, 50%);
 }
 
 
@@ -538,7 +538,7 @@
 	
 	.notification-meta {
 		font-size: 0.75rem;
-		color: $theme-text-color-light;
+		color: lighten(#252930, 40%);
 	}
 	
 	.action-link {
@@ -546,7 +546,7 @@
 	}
 	
 	.app-card-footer {
-		background: mix($theme-bg-light, white, 50%);
+		background: mix(#f5f6fe, white, 50%);
 	}
 }
 

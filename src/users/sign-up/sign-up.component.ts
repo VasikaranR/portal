@@ -1,5 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { DataService } from 'src/app/data.service';
 
 @Component({
   selector: 'app-sign-up',
@@ -8,7 +10,7 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 })
 export class SignUpComponent implements OnInit {
 
-  constructor(private formbuilder: FormBuilder) { }
+  constructor(private formbuilder: FormBuilder,private dataService:DataService) { }
   signUpForm!:FormGroup | any
 
   ngOnInit(): void {
@@ -21,7 +23,8 @@ export class SignUpComponent implements OnInit {
   }
 
   public signUp(){
-    
+
+    this.dataService.SignUp(this.signUpForm.value)
   }
 
 

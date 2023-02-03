@@ -1,19 +1,20 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AccountsComponent } from './accounts/accounts.component';
-import { ChartsComponent } from './charts/charts.component';
-import { NotificationComponent } from './notification/notification.component';
-import { OverviewComponent } from './overview/overview.component';
-import { ResetPasswordComponent } from './reset-password/reset-password.component';
-import { SettingsComponent } from './settings/settings.component';
+import { AuthguardService as AuthGuard } from './authguard.service';
 
 const routes: Routes = [
-  {path:'reset',component:ResetPasswordComponent},
-  {path:'account',component:AccountsComponent},
-  {path:'notification',component:NotificationComponent},
-  {path:'settings',component:SettingsComponent},
-  {path:'overview',component:OverviewComponent},
-  {path:'charts',component:ChartsComponent}
+  { 
+    path: 'portal',
+    loadChildren: () => 
+    import('../portal/portal.module').then(m => m.PortalModule),
+    canActivate:[AuthGuard]
+  },
+  {
+    path:'users',
+    loadChildren: () =>
+    import('../users/users.module').then(m => m.UsersModule),
+  }
+
 ];
 
 @NgModule({
