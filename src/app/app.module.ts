@@ -5,29 +5,23 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { HttpClientModule } from '@angular/common/http';
-import { SidebarComponent } from './sidebar/sidebar.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
-import { ErrorComponent } from '../portal/error/error.component';
-import { SearchComponent } from './search/search.component';
-import { SideToggleComponent } from './side-toggle/side-toggle.component';
+import { ErrorComponent } from './users/error/error.component';
+import { DocsComponent } from './portal/docs/docs.component';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    SidebarComponent,
-    HeaderComponent,
-    FooterComponent,
     ErrorComponent,
-    SearchComponent,
-    SideToggleComponent
+    DocsComponent,
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+  
     
   ],
   providers: [],

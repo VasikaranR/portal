@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sidebar',
@@ -14,9 +15,42 @@ export class SidebarComponent implements OnInit {
   public ResetPassword: string = 'Reset Password';
   public Error:string = '404 Error';
 
-  constructor() { }
+  public dataInternal = [
+    {
+       item: "notification"
+    },
+    {
+       item: "accounts"
+    },
+    {
+       item: "settings"
+    }
+ ]
+
+ public dataExternal = [
+  {
+     item: "login"
+  },
+  {
+     item: "sign-up"
+  },
+  {
+     item: "reset-password"
+  },
+  {
+    item:"404-error"
+  }
+]
+
+  constructor(private router:Router) { 
+
+  }
 
   ngOnInit(): void {
+  }
+
+  callUrl(data:any){
+    this.router.navigate(['users/',data])
   }
 
 }

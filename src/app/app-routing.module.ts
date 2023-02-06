@@ -6,14 +6,15 @@ const routes: Routes = [
   { 
     path: 'portal',
     loadChildren: () => 
-    import('../portal/portal.module').then(m => m.PortalModule),
+    import('./portal/portal/portal.module').then(m => m.PortalModule),
     canActivate:[AuthGuard]
   },
   {
     path:'users',
     loadChildren: () =>
-    import('../users/users.module').then(m => m.UsersModule),
+    import('./users/users.module').then(m => m.UsersModule),
   }
+
 
 ];
 
