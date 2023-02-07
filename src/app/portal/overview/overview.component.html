@@ -1,4 +1,5 @@
-
+<div class="app-content pt-3 p-md-3 p-lg-4"> 
+<div class="app-content pt-3 p-md-3 p-lg-4"> 
     <div class="app-wrapper">
 	    
 	    <div class="app-content pt-3 p-md-3 p-lg-4">
@@ -89,7 +90,7 @@
 							        </div><!--//col-->
 							        <div class="col-auto">
 								        <div class="card-header-action">
-									        <a href="charts.html">More charts</a>
+											
 								        </div><!--//card-header-actions-->
 							        </div><!--//col-->
 						        </div><!--//row-->
@@ -103,9 +104,9 @@
 									    <option value="3">This Year</option>
 									</select>
 							    </div>
-						        <div class="chart-container">
-				                    <canvas id="canvas-linechart" ></canvas>
-						        </div>
+								<div class="chart-container">
+									<canvas  id="lineChart" >{{ linechart }}</canvas>
+							  </div>
 					        </div><!--//app-card-body-->
 				        </div><!--//app-card-->
 			        </div><!--//col-->
@@ -133,8 +134,8 @@
 									</select>
 							    </div>
 						        <div class="chart-container">
-				                    <canvas id="canvas-barchart" ></canvas>
-						        </div>
+									<canvas  id="barChart" >{{ barchart }}</canvas>
+							  </div>
 					        </div><!--//app-card-body-->
 				        </div><!--//app-card-->
 			        </div><!--//col-->
@@ -381,3 +382,5 @@
 			    
 		    </div><!--//container-fluid-->
 	    </div><!--//app-content-->
+		</div>
+		</div>

@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ErrorComponent } from './users/error/error.component';
 import { DocsComponent } from './portal/docs/docs.component';
+import { CommonModule } from '@angular/common';
 
 
 
@@ -21,8 +22,7 @@ import { DocsComponent } from './portal/docs/docs.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-  
-    
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

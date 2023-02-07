@@ -5,12 +5,12 @@
     <div class="sidepanel-inner d-flex flex-column">
         <a href="#" id="sidepanel-close" class="sidepanel-close d-xl-none">&times;</a>
         <div class="app-branding">
-            <a class="app-logo" href="index.html"><img class="logo-icon me-2" src="/portal/src/assets/images/app-logo.svg" alt="logo"><span class="logo-text">PORTAL</span></a>
+            <a class="app-logo"><img class="logo-icon me-2" src="/portal/src/assets/images/app-logo.svg" alt="logo"><span class="logo-text">PORTAL</span></a>
 
         </div><!--//app-branding-->  
         
         <nav id="app-nav-main" class="app-nav app-nav-main flex-grow-1">
-            <ul class="app-menu list-unstyled accordion" id="menu-accordion">
+            <ul class="app-menu list-unstyled accordion" id="menu-accordion"  *ngFor="let data of dataExternal">
                 <li class="nav-item">
                     <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
                     <a class="nav-link" [routerLink]="['/portal/overview']">
@@ -20,7 +20,7 @@
   <path fill-rule="evenodd" d="M13 2.5V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
 </svg>
                          </span>
-                         <span class="nav-link-text">Overview</span>
+                         <span class="nav-link-text">{{data.item}}</span>
                     </a><!--//nav-link-->
                 </li><!--//nav-item-->
                 <li class="nav-item">
@@ -68,7 +68,7 @@
                          </span><!--//submenu-arrow-->
                     </a><!--//nav-link-->
                     <div id="submenu-1" class="collapse submenu submenu-1" data-bs-parent="#menu-accordion">
-                        <ul class="submenu-list list-unstyled" *ngFor="let data of dataInternal" >
+                        <ul class="submenu-list list-unstyled"  >
                             <li class="submenu-item"><a class="submenu-link" [routerLink]="[data.item]">{{data.item}}</a></li>
                             <!-- <li class="submenu-item"><a class="submenu-link" [routerLink]="['accounts']"></a></li>
                             <li class="submenu-item"><a class="submenu-link" [routerLink]="['settings']"></a></li>

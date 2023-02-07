@@ -16,14 +16,12 @@ export class SidebarComponent implements OnInit {
   public Error:string = '404 Error';
 
   public dataInternal = [
+   
+    
     {
-       item: "notification"
-    },
-    {
-       item: "accounts"
-    },
-    {
-       item: "settings"
+      data:[
+
+      ]
     }
  ]
 
@@ -39,7 +37,16 @@ export class SidebarComponent implements OnInit {
   },
   {
     item:"404-error"
-  }
+  },
+  {
+   item: "notification"
+  },
+  {
+   item: "accounts"
+  },
+  { 
+   item: "settings"
+   },
 ]
 
   constructor(private router:Router) { 

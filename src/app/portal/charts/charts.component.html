@@ -1,3 +1,5 @@
+<div class="app-content pt-3 p-md-3 p-lg-4"> 
+<div class="app-content pt-3 p-md-3 p-lg-4"> 
 <div class="app-wrapper">
 	    
     <div class="app-content pt-3 p-md-3 p-lg-4">
@@ -31,9 +33,12 @@
                             <h4 class="app-card-title">Area Line Chart Demo</h4>
                         </div><!--//app-card-header-->
                         <div class="app-card-body p-4">					   
-                            <div class="chart-container">
+                            <!-- <div class="chart-container">
                                 <canvas id="chart-line" ></canvas>
-                            </div>
+                            </div> -->
+                            <div class="chart-container">
+                                <canvas  id="MyChart" >{{ barchart }}</canvas>
+                          </div>
                         </div><!--//app-card-body-->
                     </div><!--//app-card-->
                 </div><!--//col-->
@@ -43,9 +48,12 @@
                             <h4 class="app-card-title">Bar Chart Demo</h4>
                         </div><!--//app-card-header-->
                         <div class="app-card-body p-4">					   
-                            <div class="chart-container">
+                            <!-- <div class="chart-container">
                                 <canvas id="chart-bar" ></canvas>
-                            </div>
+                            </div> -->
+                            <div class="chart-container">
+                                <canvas  id="lineChart" >{{ barchart }}</canvas>
+                          </div>
                         </div><!--//app-card-body-->
                     </div><!--//app-card-->
                 </div><!--//col-->
@@ -55,9 +63,12 @@
                             <h4 class="app-card-title">Pie Chart Demo</h4>
                         </div><!--//app-card-header-->
                         <div class="app-card-body p-4">					   
-                            <div class="chart-container">
+                            <!-- <div class="chart-container">
                                 <canvas id="chart-pie" ></canvas>
-                            </div>
+                            </div> -->
+                            <div class="chart-container">
+                                <canvas  id="pieChart" >{{ piechart }}</canvas>
+                          </div>
                         </div><!--//app-card-body-->
                     </div><!--//app-card-->
                 </div><!--//col-->
@@ -67,15 +78,22 @@
                             <h4 class="app-card-title">Doughnut Chart Demo</h4>
                         </div><!--//app-card-header-->
                         <div class="app-card-body p-4">					   
-                            <div class="chart-container">
+                            <!-- <div class="chart-container">
                                 <canvas id="chart-doughnut" ></canvas>
-                            </div>
+                            </div> -->
+                            <div class="chart-container">
+                                <canvas  id="dognutChart" >{{ dognutchart }}</canvas>
+                          </div>
+                            
                         </div><!--//app-card-body-->
                     </div><!--//app-card-->
                 </div><!--//col-->
             </div><!--//row-->
         </div><!--//container-fluid-->
     </div><!--//app-content-->
+</div>
+</div>
+</div>
                   
 
                 
