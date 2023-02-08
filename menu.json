@@ -1,0 +1,70 @@
+{    
+  
+   "menu": [
+    {
+    "text": "Overview",
+    "icon": "people",
+    "routerLink": "overview"
+    },
+   {
+    "text": "Docs",
+    "icon": "supervised_user_circle",
+    "routerLink": "docs"
+},
+{
+  "text": "pages",
+  "icon": "inventory_1",
+  "children": [{
+    "text": "Notifications",
+    "icon": "category",
+    "routerLink": "notifications"
+},
+{
+    "text": "Accounts",
+    "icon": "layers",
+    "routerLink": "accounts"
+},
+{
+    "text": "settings",
+    "icon": "all_inbox",
+    "routerLink": "settings"
+}
+]
+  },
+{
+    "text": "External",
+    "icon": "inventory_2",
+    "children": [{
+            "text": "Log in",
+            "icon": "category",
+            "routerLink": "/product/category"
+        },
+        {
+            "text": "Sign Up",
+            "icon": "layers",
+            "routerLink": "/product/sub-category"
+        },
+        {
+            "text": "Reset Password",
+            "icon": "all_inbox",
+            "routerLink": "/product/manage"
+        },
+        {
+          "text": "404",
+          "icon": "all_inbox",
+          "routerLink": "/product/manage"
+      }
+    ]
+},
+{
+  "text": "Charts",
+  "icon": "people",
+  "routerLink": "charts"
+},
+{
+  "text": "Help",
+  "icon": "people",
+  "routerLink": "help"
+}
+]
+}

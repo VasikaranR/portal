@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { response } from 'express';
+import { map } from 'rxjs';
+import { DataService } from 'src/app/data.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -7,57 +10,95 @@ import { Router } from '@angular/router';
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent implements OnInit {
-  public Notification:string='Notification';
-  public Settings:string='Settings';
-  public Account:string='Account'
-  public Login: string = 'Login';
-  public SignUp: string = 'Sign Up';
-  public ResetPassword: string = 'Reset Password';
-  public Error:string = '404 Error';
+  
+  public dataExternal=[
+      {
+      "text": "Overview",
+      "icon": "people",
+      "routerLink": "overview"
+      },
+     {
+      "text": "Docs",
+      "icon": "supervised_user_circle",
+      "routerLink": "docs"
+  },
+  {
+    "text": "pages",
+    "icon": "inventory_1",
+    "children": [{
+      "text": "notification",
+      "icon": "category",
+      "routerLink": "notifications"
+  },
+  {
+      "text": "accounts",
+      "icon": "layers",
+      "routerLink": "accounts"
+  },
+  {
+      "text": "settings",
+      "icon": "all_inbox",
+      "routerLink": "settings"
+  }
+  ]
+    },
+  {
+      "text": "External",
+      "icon": "inventory_2",
+      "children": [{
+              "text": "login",
+              "icon": "category",
+              "routerLink": "login"
 
-  public dataInternal = [
-   
-    
-    {
-      data:[
+          },
+          {
+              "text": "sign-up",
+              "icon": "layers",
+              "routerLink": "sign-up"
 
+          },
+          {
+              "text": "reset-password",
+              "icon": "all_inbox",
+          },
+          {
+            "text": "404-error",
+            "icon": "all_inbox",
+        }
       ]
-    }
- ]
+  },
+  {
+    "text": "Charts",
+    "icon": "people",
+    "routerLink": "charts"
+  },
+  {
+    "text": "Help",
+    "icon": "people",
+    "routerLink": "help"
+  }
+  ]
 
- public dataExternal = [
-  {
-     item: "login"
-  },
-  {
-     item: "sign-up"
-  },
-  {
-     item: "reset-password"
-  },
-  {
-    item:"404-error"
-  },
-  {
-   item: "notification"
-  },
-  {
-   item: "accounts"
-  },
-  { 
-   item: "settings"
-   },
-]
-
-  constructor(private router:Router) { 
+  public dataChildren:any = []
+  
+  constructor(private router:Router , private dataservice:DataService) { 
 
   }
 
   ngOnInit(): void {
+   this.dataservice.getMenu().subscribe((data)=>{
+    
+    console.log(data)
+   }
+
+  )
   }
 
   callUrl(data:any){
-    this.router.navigate(['users/',data])
+    console.log("this is ",data)
+    this.router.navigate(['/users',data])
   }
+
+  
 
 }
