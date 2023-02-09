@@ -1,7 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { response } from 'express';
-import { map } from 'rxjs';
 import { DataService } from 'src/app/data.service';
 
 @Component({
@@ -11,7 +9,7 @@ import { DataService } from 'src/app/data.service';
 })
 export class SidebarComponent implements OnInit {
   
-  public dataExternal=[
+   public dataExternal=[
       {
       "text": "Overview",
       "icon": "people",
@@ -21,7 +19,13 @@ export class SidebarComponent implements OnInit {
       "text": "Docs",
       "icon": "supervised_user_circle",
       "routerLink": "docs"
-  },
+    },
+    {
+      "text": "orders",
+      "icon": "supervised_user_circle",
+      "routerLink": "orders"
+    },
+
   {
     "text": "pages",
     "icon": "inventory_1",
@@ -74,6 +78,21 @@ export class SidebarComponent implements OnInit {
   },
   {
     "text": "Help",
+    "icon": "people",
+    "routerLink": "help"
+  },
+  {
+    "text": "settings",
+    "icon": "people",
+    "routerLink": "settings"
+  },
+  {
+    "text": "Download",
+    "icon": "people",
+    "routerLink": "help"
+  },
+  {
+    "text": "License",
     "icon": "people",
     "routerLink": "help"
   }

@@ -233,3 +233,21 @@
 	    }
 	}
 }
+.app-branding{
+	height: 60px; //same as .app-header
+	padding-top: 1rem;
+	padding-left: 1rem;
+	margin-bottom: 1rem;
+	
+	.logo-icon {
+		width: 36px;
+	    height: 36px;
+	}
+	
+    .logo-text {
+	    color: #252930;
+	    font-size: 1.25rem;
+	    font-weight: 600;
+	    vertical-align: middle;
+    }
+}

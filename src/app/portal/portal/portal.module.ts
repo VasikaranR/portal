@@ -15,6 +15,7 @@ import { SideToggleComponent } from '../side-toggle/side-toggle.component';
 import { FooterComponent } from '../footer/footer.component';
 import { SidebarComponent } from '../sidebar/sidebar.component';
 import { PortalComponent } from './portal.component';
+import { SvgSideComponent } from '../svg-side/svg-side.component';
 
 
 
@@ -33,6 +34,7 @@ import { PortalComponent } from './portal.component';
     FooterComponent,
     SidebarComponent,
     PortalComponent,
+    SvgSideComponent
 
   ],
   imports: [
